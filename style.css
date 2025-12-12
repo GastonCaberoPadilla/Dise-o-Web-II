@@ -1,0 +1,176 @@
+/* RESET SIMPLE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FONDO Y TEXTO GENERAL */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #050816;
+    /* fondo oscuro */
+    color: #f5f5f5;
+}
+
+.lista {
+    padding: 6px;
+}
+
+/* BARRA SUPERIOR */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 30px;
+    border-bottom: 1px solid #1f2937;
+    background-color: #050816;
+}
+
+.logo {
+    font-weight: bold;
+    color: #00ffe7;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #ff2aac;
+    /* pequeño contraste tipo neón */
+}
+
+.menu a {
+    color: #e5e7eb;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.9rem;
+}
+
+.menu a:hover {
+    color: #00ffe7;
+}
+
+/* LAYOUT PRINCIPAL */
+.wrapper {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 20px;
+}
+
+/* SIDEBAR IZQUIERDA */
+.sidebar {
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card {
+    background-color: #0b1120;
+    border: 1px solid #1f2937;
+    padding: 12px 14px;
+    border-radius: 8px;
+}
+
+.card h3 {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+    color: #00ffe7;
+    text-transform: uppercase;
+}
+
+.card p,
+.card ul {
+    font-size: 0.85rem;
+    color: #d1d5db;
+}
+
+.card ul {
+    list-style: none;
+}
+
+.card ul li+li {
+    margin-top: 4px;
+}
+
+.card .links a {
+    color: #ff2aac;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.card .links a:hover {
+    text-decoration: underline;
+}
+
+/* CONTENIDO DERECHA */
+.contenido {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* SECCIÓN DE PRESENTACIÓN */
+.presentacion h1 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.resumen {
+    font-size: 0.95rem;
+    color: #d1d5db;
+}
+
+/* IMAGEN PRINCIPAL */
+.imagen img {
+    width: 100%;
+    max-height: 260px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 10px;
+    border: 1px solid #1f2937;
+}
+
+.imagen .pie {
+    font-size: 0.8rem;
+    color: #9ca3af;
+    margin-top: 6px;
+}
+
+/* TEXTO INFERIOR */
+.texto h2 {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+}
+
+.texto p {
+    font-size: 0.95rem;
+    color: #d1d5db;
+}
+
+.texto p+p {
+    margin-top: 6px;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 20px;
+    padding: 10px 0;
+    text-align: center;
+    border-top: 1px solid #1f2937;
+    font-size: 0.8rem;
+    color: #9ca3af;
+}
+
+/* RESPONSIVE BÁSICO: EN CELULAR SE PONE TODO EN COLUMNA */
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+}

@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #050816;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.tarjeta-perfil {
+    background: linear-gradient(135deg, #0b1231, #0f1e61);
+    width: 280px;
+    padding: 25px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
+}
+
+.perfil-imagen {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.perfil-nombre {
+    margin: 5px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.perfil-titulo {
+    margin: 5px 0;
+    font-size: 15px;
+    color: #000000;
+}
+
+.perfil-descripcion {
+    font-size: 14px;
+    margin: 10px 0 20px;
+    color: #FFF;
+}
+
+.btn-contactar {
+    padding: 10px 25px;
+    background: #e38424;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-contactar:hover {
+    background: #005fcc;
+}
