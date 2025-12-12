@@ -1,152 +1,103 @@
-/* =====================================
-   RESET
-   ===================================== */
-
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* BASE */
 body {
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-    background: #f5f7fa;
-    color: #2c3e50;
+    font-family: 'Inter', system-ui, sans-serif;
+    background: #0f172a;
+    color: #e5e7eb;
     line-height: 1.6;
-    padding: 2rem 0;
+    padding: 3rem 0;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1100px;
+    margin: auto;
     padding: 0 2rem;
 }
 
 h1 {
     text-align: center;
-    color: #2c3e50;
+    font-size: 2.6rem;
     margin-bottom: 0.5rem;
-    font-size: 2.5rem;
+    color: #38bdf8;
 }
 
 .subtitle {
     text-align: center;
-    color: #7f8c8d;
+    color: #94a3b8;
     margin-bottom: 3rem;
-    font-size: 1.1rem;
 }
 
-/* =====================================
-   SECCIONES DEMO
-   ===================================== */
-
+/* SECCIONES */
 .demo-section {
-    background: white;
+    background: #020617;
+    border: 1px solid #1e293b;
+    border-radius: 14px;
     padding: 2rem;
     margin-bottom: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .demo-section h2 {
-    color: #3498db;
+    color: #22d3ee;
     margin-bottom: 1.5rem;
-    font-size: 1.75rem;
 }
 
 .demo-section h3 {
-    color: #34495e;
-    margin: 1.5rem 0 1rem 0;
-    font-size: 1.25rem;
+    margin: 1.5rem 0 1rem;
+    color: #a5f3fc;
 }
 
 .info {
-    background: #fff3cd;
+    background: #022c22;
+    border-left: 4px solid #10b981;
     padding: 1rem;
-    border-left: 4px solid #ffc107;
     margin-bottom: 1.5rem;
-    border-radius: 4px;
 }
 
-/* =====================================
-   GRIDS
-   ===================================== */
-
-.examples-grid {
+/* GRIDS */
+.examples-grid,
+.cards-demo {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
-    margin-bottom: 1rem;
 }
 
-.comparison-grid {
+.comparison-grid,
+.bg-demo {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 2rem;
 }
 
-/* =====================================
-   BOX DEMOS - PADDING UNIFORME
-   ===================================== */
-
+/* BOX */
 .box {
-    background: #ecf0f1;
-    border: 2px dashed #bdc3c7;
-    border-radius: 8px;
+    border: 2px dashed #334155;
+    border-radius: 10px;
+    padding: 0.5rem;
 }
 
 .content {
-    background: #3498db;
-    color: white;
-    border-radius: 4px;
+    border-radius: 8px;
     text-align: center;
+    font-weight: 600;
 }
 
-.content p {
-    margin: 0.25rem 0;
-}
+/* PADDINGS */
+.padding-none { padding: 0; background: #ef4444; }
+.padding-small { padding: 10px; background: #3b82f6; }
+.padding-medium { padding: 20px; background: #22c55e; }
+.padding-large { padding: 40px; background: #a855f7; }
 
-/* ⭐ PADDING UNIFORME - Diferentes valores */
-.padding-none {
-    padding: 0;
-    background: #e74c3c;
-}
+.padding-vertical { padding: 30px 10px; background: #f97316; }
+.padding-horizontal { padding: 10px 40px; background: #14b8a6; }
+.padding-custom { padding: 10px 20px 30px 40px; background: #64748b; }
 
-.padding-small {
-    padding: 10px;
-    background: #3498db;
-}
-
-.padding-medium {
-    padding: 20px;
-    background: #2ecc71;
-}
-
-.padding-large {
-    padding: 40px;
-    background: #9b59b6;
-}
-
-/* ⭐ PADDING ASIMÉTRICO */
-.padding-vertical {
-    padding: 30px 10px; /* vertical | horizontal */
-    background: #e67e22;
-}
-
-.padding-horizontal {
-    padding: 10px 40px; /* vertical | horizontal */
-    background: #1abc9c;
-}
-
-.padding-custom {
-    padding: 10px 20px 30px 40px; /* top | right | bottom | left */
-    background: #34495e;
-}
-
-/* =====================================
-   CASOS PRÁCTICOS - BOTONES
-   ===================================== */
-
+/* BOTONES */
 .buttons-demo {
     display: flex;
     gap: 1rem;
@@ -155,37 +106,19 @@ h1 {
 }
 
 .btn {
-    background: #3498db;
-    color: white;
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
     border: none;
-    border-radius: 6px;
+    color: #020617;
+    font-weight: 700;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 1rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
 }
 
-.btn:hover {
-    background: #2980b9;
-    transform: translateY(-2px);
-}
+.btn-small { padding: 8px 16px; }
+.btn-medium { padding: 12px 24px; }
+.btn-large { padding: 16px 32px; }
 
-.btn-small {
-    padding: 8px 16px; /* Padding pequeño */
-}
-
-.btn-medium {
-    padding: 12px 24px; /* Padding mediano */
-}
-
-.btn-large {
-    padding: 16px 32px; /* Padding grande */
-}
-
-/* =====================================
-   CASOS PRÁCTICOS - INPUTS
-   ===================================== */
-
+/* INPUTS */
 .inputs-demo {
     display: flex;
     flex-direction: column;
@@ -194,275 +127,105 @@ h1 {
 }
 
 .input {
-    border: 2px solid #bdc3c7;
-    border-radius: 6px;
-    font-size: 1rem;
-    width: 100%;
-    max-width: 400px;
-}
-
-.input:focus {
-    outline: none;
-    border-color: #3498db;
-}
-
-.input-small {
-    padding: 8px 12px;
-}
-
-.input-medium {
-    padding: 12px 16px;
-}
-
-.input-large {
-    padding: 16px 20px;
-}
-
-/* =====================================
-   CASOS PRÁCTICOS - CARDS
-   ===================================== */
-
-.cards-demo {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
-
-.card {
-    background: #ffffff;
-    border: 1px solid #e0e0e0;
+    background: #020617;
+    border: 1px solid #334155;
+    color: #e5e7eb;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.card h4 {
-    color: #2c3e50;
-    margin-bottom: 0.5rem;
+.input-small { padding: 8px 12px; }
+.input-medium { padding: 12px 16px; }
+.input-large { padding: 16px 20px; }
+
+/* CARDS */
+.card {
+    background: #020617;
+    border: 1px solid #334155;
+    border-radius: 10px;
 }
 
-.card p {
-    color: #7f8c8d;
-    font-size: 0.9rem;
-}
+.card-compact { padding: 10px; }
+.card-comfortable { padding: 20px; }
+.card-spacious { padding: 40px; }
 
-.card-compact {
-    padding: 10px; /* Poco espacio */
-}
-
-.card-comfortable {
-    padding: 20px; /* Espacio confortable */
-}
-
-.card-spacious {
-    padding: 40px; /* Mucho espacio */
-}
-
-/* =====================================
-   PADDING Y BACKGROUNDS
-   ===================================== */
-
-.bg-demo {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 1rem;
-}
-
+/* BACKGROUND */
 .bg-box {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 12px;
+    background: radial-gradient(circle at top, #38bdf8, #020617);
     min-height: 150px;
+    border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.bg-no-padding {
-    padding: 0; /* Sin padding - el background toca los bordes */
-}
-
-.bg-with-padding {
-    padding: 30px; /* Con padding - el background se extiende */
-}
+.bg-with-padding { padding: 30px; }
 
 .inner-content {
-    background: white;
-    color: #2c3e50;
+    background: #020617;
     padding: 1rem;
-    border-radius: 6px;
-    font-weight: 600;
+    border-radius: 8px;
 }
 
-/* =====================================
-   BOX-SIZING COMPARISON
-   ===================================== */
-
-.comparison-box {
-    text-align: center;
-}
-
-.comparison-box h3 {
-    margin-bottom: 1rem;
-}
-
+/* BOX SIZING */
 .sized-box {
     width: 200px;
-    margin: 0 auto 1rem;
-    background: #3498db;
-    color: white;
-    text-align: center;
+    background: #38bdf8;
+    color: #020617;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
 }
 
-.sized-box p {
-    margin: 0.25rem 0;
-}
+.content-box-demo { box-sizing: content-box; }
+.border-box-demo { box-sizing: border-box; }
 
 .highlight {
-    font-weight: 700;
-    font-size: 1.1rem;
-    background: rgba(255,255,255,0.2);
-    padding: 0.5rem;
-    border-radius: 4px;
+    font-weight: 800;
 }
 
-/* ⭐ CONTENT-BOX: padding se SUMA al width */
-.content-box-demo {
-    box-sizing: content-box;
-    padding: 20px;
-    /* Ancho total visible: 200px + 20px + 20px = 240px */
-}
-
-/* ⭐ BORDER-BOX: padding se RESTA del width */
-.border-box-demo {
-    box-sizing: border-box;
-    padding: 20px;
-    /* Ancho total visible: 200px (incluye padding) */
-}
-
-.explanation {
-    color: #7f8c8d;
-    font-size: 0.95rem;
-    font-style: italic;
-}
-
-/* =====================================
-   INLINE VS BLOCK
-   ===================================== */
-
+/* INLINE */
 .inline-padded {
     padding: 10px 20px;
-    background: #3498db;
-    color: white;
-    /* Padding horizontal funciona, vertical se superpone */
+    background: #3b82f6;
 }
 
 .inline-block-padded {
     display: inline-block;
     padding: 10px 20px;
-    background: #2ecc71;
-    color: white;
-    /* Padding funciona correctamente en todos los lados */
+    background: #22c55e;
 }
 
 .block-padded {
     padding: 20px;
-    background: #9b59b6;
-    color: white;
-    margin: 1rem 0;
-    border-radius: 6px;
+    background: #a855f7;
+    border-radius: 8px;
+    margin-top: 1rem;
 }
 
-/* =====================================
-   CÓDIGO DE REFERENCIA
-   ===================================== */
-
+/* CÓDIGO */
 .code-section {
-    background: #2c3e50;
-    color: #ecf0f1;
-}
-
-.code-section h2 {
-    color: #3498db;
+    background: #020617;
 }
 
 pre {
-    background: #34495e;
+    background: #020617;
+    border: 1px solid #334155;
     padding: 1.5rem;
-    border-radius: 8px;
+    border-radius: 10px;
     overflow-x: auto;
-    font-family: 'Courier New', monospace;
-    line-height: 1.8;
 }
 
-code {
-    color: #1abc9c;
-    font-size: 0.95rem;
-}
-
-/* =====================================
-   RESPONSIVE
-   ===================================== */
-
+/* RESPONSIVE */
 @media (max-width: 768px) {
-    .container {
-        padding: 0 1rem;
-    }
-    
     h1 {
         font-size: 2rem;
     }
-    
-    .demo-section {
-        padding: 1.5rem 1rem;
-    }
-    
-    .examples-grid,
-    .cards-demo {
-        grid-template-columns: 1fr;
-    }
-    
+
     .buttons-demo {
         flex-direction: column;
     }
-    
+
     .btn {
         width: 100%;
     }
 }
-
-/* =====================================
-   NOTAS EDUCATIVAS
-   ===================================== */
-
-/*
-📚 CONCEPTOS CLAVE DEL PADDING:
-
-1. El padding crea espacio DENTRO del elemento,
-   entre el contenido y el borde
-
-2. El background se extiende hasta el padding
-   (no llega hasta el margin)
-
-3. Con box-sizing: content-box (defecto):
-   - El padding se SUMA al width/height
-   - width: 200px + padding: 20px = 240px total
-
-4. Con box-sizing: border-box (recomendado):
-   - El padding se RESTA del width/height
-   - width: 200px + padding: 20px = 200px total
-
-5. Valores:
-   - padding: 20px; (todos los lados)
-   - padding: 10px 20px; (vertical | horizontal)
-   - padding: 10px 20px 30px 40px; (T R B L)
-
-6. Unidades:
-   - px (píxeles fijos)
-   - rem/em (relativos al font-size)
-   - % (relativo al ancho del padre)
-
-⭐ BEST PRACTICE:
-Usa box-sizing: border-box globalmente:
-* { box-sizing: border-box; }
-*/
