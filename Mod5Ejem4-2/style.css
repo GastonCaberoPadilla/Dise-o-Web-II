@@ -2,41 +2,24 @@
    VARIABLES & SISTEMA TIPOGRÁFICO
    ========================================= */
 :root {
-    /* Paleta de colores básica para el ejercicio 
-    */
-    --bg-color: #f8f9fa;
-    --text-color: #2d3436;
-    --accent-color: #0984e3;
+    /* Paleta espacial / científica */
+    --bg-color: #0b1020;
+    --text-color: #e5e7eb;
+    --accent-color: #38bdf8;
+    --muted-color: #9ca3af;
 
-    /* SISTEMA FLUIDO CON CLAMP()
-      Sintaxis: clamp(min, val_dinamico, max)
-      
-      - min: El tamaño más pequeño permitido (ej. móvil).
-      - val_dinamico: Cálculo basado en el ancho del viewport (vw).
-      - max: El tamaño más grande permitido (ej. escritorio).
-    */
+    /* SISTEMA TIPOGRÁFICO FLUIDO */
+    --fs-body: clamp(1rem, 0.9rem + 0.4vw, 1.2rem);
+    --fs-h1: clamp(2.2rem, 1.8rem + 4vw, 3.6rem);
+    --fs-h2: clamp(1.6rem, 1.3rem + 2.5vw, 2.6rem);
+    --fs-h3: clamp(1.3rem, 1.1rem + 1.8vw, 2rem);
 
-    /* Body: Escala de 1rem (16px) a 1.25rem (20px) */
-    --fs-body: clamp(1rem, 0.9rem + 0.5vw, 1.25rem);
-
-    /* H1: Escala de 2rem (32px) a 3.5rem (56px) agresivamente */
-    --fs-h1: clamp(2rem, 1.5rem + 5vw, 3.5rem);
-
-    /* H2: Escala de 1.5rem (24px) a 2.5rem (40px) */
-    --fs-h2: clamp(1.5rem, 1.2rem + 3vw, 2.5rem);
-
-    /* H3: Escala más sutil */
-    --fs-h3: clamp(1.25rem, 1.1rem + 2vw, 2rem);
-
-    /* Line Heights adaptables */
-    --lh-tight: 1.1;
-    /* Para encabezados grandes */
-    --lh-body: 1.6;
-    /* Para lectura cómoda */
+    --lh-tight: 1.15;
+    --lh-body: 1.65;
 }
 
 /* =========================================
-   RESET BÁSICO
+   RESET
    ========================================= */
 * {
     box-sizing: border-box;
@@ -44,20 +27,30 @@
     padding: 0;
 }
 
+/* =========================================
+   BODY
+   ========================================= */
 body {
-    background-color: var(--bg-color);
+    background: radial-gradient(circle at top, #111827, #020617);
     color: var(--text-color);
     font-family: system-ui, -apple-system, sans-serif;
 
-    /* Aplicación de la variable fluida base */
     font-size: var(--fs-body);
     line-height: var(--lh-body);
 
-    padding: 2rem;
+    padding: 3rem 1.5rem;
 }
 
 /* =========================================
-   ESTILOS DE ENCABEZADOS
+   LAYOUT
+   ========================================= */
+.container {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   HEADERS
    ========================================= */
 h1,
 h2,
@@ -66,7 +59,6 @@ h4 {
     font-weight: 800;
     line-height: var(--lh-tight);
     margin-bottom: 0.8em;
-    color: #1a1a1a;
 }
 
 h1 {
@@ -76,58 +68,64 @@ h1 {
 
 h2 {
     font-size: var(--fs-h2);
-    margin-top: 2em;
+    margin-top: 2.2em;
 }
 
 h3 {
     font-size: var(--fs-h3);
 }
 
+h4 {
+    font-size: 1.05em;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--muted-color);
+}
+
 /* =========================================
-   ELEMENTOS DE TEXTO
+   TEXTO
    ========================================= */
 p {
-    margin-bottom: 1.5em;
     max-width: 65ch;
-    /* Ancho óptimo de lectura */
+    margin-bottom: 1.6em;
 }
 
 .subtitle {
-    font-size: 1.2em;
-    /* Relativo al tamaño fluido del body */
-    opacity: 0.8;
-    font-weight: 300;
-}
-
-blockquote {
-    border-left: 5px solid var(--accent-color);
-    padding-left: 1rem;
-    font-style: italic;
     font-size: 1.1em;
-    margin: 2rem 0;
-    background: #e3e8ec;
-    padding: 1rem;
-    border-radius: 0 8px 8px 0;
-}
-
-code {
-    background-color: #dfe6e9;
-    padding: 0.2em 0.4em;
-    border-radius: 4px;
-    font-size: 0.9em;
-}
-
-hr {
-    border: 0;
-    height: 1px;
-    background: #b2bec3;
-    margin: 3rem 0;
+    color: var(--muted-color);
+    font-weight: 400;
 }
 
 /* =========================================
-   LAYOUT
+   BLOCKQUOTE
    ========================================= */
-.container {
-    max-width: 800px;
-    margin: 0 auto;
+blockquote {
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    background: rgba(56, 189, 248, 0.08);
+    border-left: 4px solid var(--accent-color);
+    font-style: italic;
+    font-size: 1.05em;
+    border-radius: 4px;
+}
+
+/* =========================================
+   CODE
+   ========================================= */
+code {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.2em 0.45em;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: #7dd3fc;
+}
+
+/* =========================================
+   HR
+   ========================================= */
+hr {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #38bdf8, transparent);
+    margin: 3rem 0;
 }
