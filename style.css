@@ -1,23 +1,11 @@
-/* RESET SIMPLE */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* FONDO Y TEXTO GENERAL */
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
     background-color: #050816;
-    /* fondo oscuro */
-    color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #e5e7eb;
 }
 
-.lista {
-    padding: 6px;
-}
-
-/* BARRA SUPERIOR */
 .topbar {
     display: flex;
     justify-content: space-between;
@@ -35,7 +23,6 @@ body {
 
 .logo span {
     color: #ff2aac;
-    /* pequeño contraste tipo neón */
 }
 
 .menu a {
@@ -49,128 +36,146 @@ body {
     color: #00ffe7;
 }
 
-/* LAYOUT PRINCIPAL */
-.wrapper {
-    max-width: 1100px;
-    margin: 20px auto;
-    padding: 0 20px;
-    display: flex;
-    gap: 20px;
+
+.titulo {
+    text-align: center;
+    color: #00ffe7;
+    font-size: 2rem;
+    margin-bottom: 5px;
 }
 
-/* SIDEBAR IZQUIERDA */
-.sidebar {
-    width: 270px;
+.subtitulo {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #9ca3af;
+    margin-bottom: 30px;
+}
+
+.cards-container {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .card {
     background-color: #0b1120;
     border: 1px solid #1f2937;
-    padding: 12px 14px;
-    border-radius: 8px;
+    border-radius: 10px;
+    width: 300px;
+    padding: 15px;
+    transition: 0.3s;
 }
 
-.card h3 {
-    font-size: 0.95rem;
-    margin-bottom: 6px;
-    color: #00ffe7;
-    text-transform: uppercase;
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #00ffe7;
+    box-shadow: 0 0 12px #00ffe7;
 }
 
-.card p,
-.card ul {
-    font-size: 0.85rem;
-    color: #d1d5db;
-}
-
-.card ul {
-    list-style: none;
-}
-
-.card ul li+li {
-    margin-top: 4px;
-}
-
-.card .links a {
-    color: #ff2aac;
-    text-decoration: none;
-    font-size: 0.85rem;
-}
-
-.card .links a:hover {
-    text-decoration: underline;
-}
-
-/* CONTENIDO DERECHA */
-.contenido {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-/* SECCIÓN DE PRESENTACIÓN */
-.presentacion h1 {
-    font-size: 1.8rem;
-    margin-bottom: 8px;
-}
-
-.resumen {
-    font-size: 0.95rem;
-    color: #d1d5db;
-}
-
-/* IMAGEN PRINCIPAL */
-.imagen img {
+.card-img img {
     width: 100%;
-    max-height: 260px;
+    height: 180px;
     object-fit: cover;
     border-radius: 8px;
-    margin-top: 10px;
-    border: 1px solid #1f2937;
 }
 
-.imagen .pie {
-    font-size: 0.8rem;
-    color: #9ca3af;
-    margin-top: 6px;
+h3 {
+    margin-top: 12px;
+    color: #ff2aac;
 }
 
-/* TEXTO INFERIOR */
-.texto h2 {
-    font-size: 1.1rem;
-    margin-bottom: 6px;
+.precio {
+    margin-top: 8px;
+    font-size: 1.2rem;
+    color: #00ffe7;
 }
 
-.texto p {
-    font-size: 0.95rem;
-    color: #d1d5db;
+.precio-tachado {
+    color: #6b7280;
+    text-decoration: line-through;
+    margin-left: 8px;
 }
 
-.texto p+p {
-    margin-top: 6px;
+.descripcion {
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    margin: 10px 0 15px 0;
 }
 
-/* FOOTER */
-.footer {
-    margin-top: 20px;
-    padding: 10px 0;
-    text-align: center;
-    border-top: 1px solid #1f2937;
-    font-size: 0.8rem;
-    color: #9ca3af;
+.card-btns {
+    display: flex;
+    justify-content: space-between;
 }
 
-/* RESPONSIVE BÁSICO: EN CELULAR SE PONE TODO EN COLUMNA */
+.btn {
+    padding: 8px 14px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    color: white;
+    transition: 0.2s;
+}
+
+.btn.rojo {
+    background-color: #cc2936;
+}
+
+.btn.rojo:hover {
+    background-color: #ff4455;
+}
+
+.btn.verde {
+    background-color: #16a34a;
+}
+
+.btn.verde:hover {
+    background-color: #22c55e;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #e5e7eb;
+    margin: 4px 0;
+    transition: 0.2s ease;
+}
+
 @media (max-width: 768px) {
-    .wrapper {
-        flex-direction: column;
+
+    .menu-toggle {
+        display: block;
     }
 
-    .sidebar {
-        width: 100%;
+    .menu {
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: #050816;
+        border: 1px solid #1f2937;
+        border-radius: 8px;
+        padding: 12px;
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        z-index: 10;
+    }
+
+    .menu a {
+        margin: 0;
+        padding: 8px 0;
+        display: block;
+    }
+
+    .menu.menu-open {
+        display: flex;
     }
 }
