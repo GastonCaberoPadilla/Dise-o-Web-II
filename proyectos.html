@@ -10,20 +10,24 @@
 
 <body>
 
-    <!-- HEADER (usa tu CSS existente) -->
-    <header class="header">
-        <div class="wrap header-inner">
-
-            <a class="brand" href="index.html">MI DEV<span>BLOG</span></a>
-
-            <nav class="nav">
-                <a href="index.html">Inicio</a>
-                <a href="proyectos.html">Proyectos</a>
-                <a href="tarea 1/presentacion.html">Sobre Nosotros</a>
-                <a href="#">Contacto</a>
-            </nav>
-
+    <!-- HEADER -->
+    <header class="topbar">
+        <div class="logo">
+            MI DEV<span>BLOG</span>
         </div>
+
+        <button class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="menu" id="menu">
+            <a href="index.html">Inicio</a>
+            <a href="proyectos.html">Proyectos</a>
+            <a href="tarea 1/presentacion.html">Sobre Nosotros</a>
+            <a href="#">Contacto</a>
+        </nav>
     </header>
 
     <!-- TITULO -->
@@ -33,9 +37,10 @@
     <!-- CARDS -->
     <section class="cards-container">
 
+        <!-- MOD 3 -->
         <article class="card">
             <div class="card-img">
-                <img src="Mod3ejem1/image.png" alt="Mod3Ejem1">
+                <img src="Mod3ejem1/image.png">
             </div>
             <h3>Mod3Ejem1</h3>
             <p class="precio">Modal</p>
@@ -47,7 +52,7 @@
 
         <article class="card">
             <div class="card-img">
-                <img src="Mod3Ejem2/image.png" alt="Mod3Ejem2">
+                <img src="Mod3Ejem2/image.png">
             </div>
             <h3>Mod3Ejem2</h3>
             <p class="precio">Navbar Sticky</p>
@@ -59,7 +64,7 @@
 
         <article class="card">
             <div class="card-img">
-                <img src="Mod3Ejem3/image.png" alt="Mod3Ejem3">
+                <img src="Mod3Ejem3/image.png">
             </div>
             <h3>Mod3Ejem3</h3>
             <p class="precio">Card Badge</p>
@@ -71,7 +76,7 @@
 
         <article class="card">
             <div class="card-img">
-                <img src="Mod3Ejem4/image.png" alt="Mod3Ejem4">
+                <img src="Mod3Ejem4/image.png">
             </div>
             <h3>Mod3Ejem4</h3>
             <p class="precio">Hero Overlay</p>
@@ -81,9 +86,10 @@
             </div>
         </article>
 
+        <!-- MOD 4 -->
         <article class="card">
             <div class="card-img">
-                <img src="Mod4Ejem1/image.png" alt="Mod4Ejem1">
+                <img src="Mod4Ejem1/image.png">
             </div>
             <h3>Mod4Ejem1</h3>
             <p class="precio">Navbar Flexbox</p>
@@ -95,7 +101,7 @@
 
         <article class="card">
             <div class="card-img">
-                <img src="Mod4Ejem2/image.png" alt="Mod4Ejem2">
+                <img src="Mod4Ejem2/image.png">
             </div>
             <h3>Mod4Ejem2</h3>
             <p class="precio">Gallery Grid</p>
@@ -107,7 +113,7 @@
 
         <article class="card">
             <div class="card-img">
-                <img src="Mod4Ejem3/image.png" alt="Mod4Ejem3">
+                <img src="Mod4Ejem3/image.png">
             </div>
             <h3>Mod4Ejem3</h3>
             <p class="precio">Holy Grail</p>
@@ -119,7 +125,7 @@
 
         <article class="card">
             <div class="card-img">
-                <img src="Mod4Ejem4/image.png" alt="Mod4Ejem4">
+                <img src="Mod4Ejem4/image.png">
             </div>
             <h3>Mod4Ejem4</h3>
             <p class="precio">Dashboard</p>
@@ -129,9 +135,10 @@
             </div>
         </article>
 
+        <!-- MOD 5 -->
         <article class="card">
             <div class="card-img">
-                <img src="Mod5Ejem4/image.png" alt="Mod5Ejem4">
+                <img src="Mod5Ejem4/image.png">
             </div>
             <h3>Mod5Ejem4</h3>
             <p class="precio">Img Responsiva</p>
@@ -143,7 +150,7 @@
 
         <article class="card">
             <div class="card-img">
-                <img src="Mod5Ejem4-2/image.png" alt="Mod5Ejem4-2">
+                <img src="Mod5Ejem4-2/image.png">
             </div>
             <h3>Mod5Ejem4-2</h3>
             <p class="precio">Typography</p>
@@ -155,7 +162,7 @@
 
         <article class="card">
             <div class="card-img">
-                <img src="Mod5Ejem5/image.png" alt="Mod5Ejem5">
+                <img src="Mod5Ejem5/image.png">
             </div>
             <h3>Mod5Ejem5</h3>
             <p class="precio">Imágenes Responsive</p>
@@ -167,7 +174,15 @@
 
     </section>
 
-    <script src="scroll.js"></script>
+    <!-- JS MENU -->
+    <script>
+        const btn = document.getElementById("menuToggle");
+        const menu = document.getElementById("menu");
+
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("menu-open");
+        });
+    </script>
 
 </body>
 </html>
