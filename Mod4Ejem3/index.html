@@ -13,48 +13,65 @@
     <div class="layout">
 
         <header class="header">
-            <h1>Panel Académico</h1>
-            <p>Sistema de gestión institucional</p>
+            <div>
+                <h1>Panel Académico</h1>
+                <span>Gestión Institucional</span>
+            </div>
         </header>
 
         <nav class="nav">
             <h2>Menú</h2>
             <ul>
-                <li>Inicio</li>
+                <li>Dashboard</li>
                 <li>Estudiantes</li>
                 <li>Docentes</li>
                 <li>Materias</li>
                 <li>Reportes</li>
+                <li>Configuración</li>
             </ul>
         </nav>
 
         <main class="content">
-            <article>
-                <h2>Dashboard</h2>
-                <p>
-                    Este panel utiliza el patrón <strong>Holy Grail Layout</strong>,
-                    donde cada sección cumple una función específica dentro del sistema.
-                </p>
+            <h2>Resumen General</h2>
 
+            <div class="cards">
+                <div class="card">
+                    <h3>Estudiantes</h3>
+                    <p class="number">1,248</p>
+                </div>
+                <div class="card">
+                    <h3>Docentes</h3>
+                    <p class="number">86</p>
+                </div>
+                <div class="card">
+                    <h3>Materias</h3>
+                    <p class="number">54</p>
+                </div>
+            </div>
+
+            <article class="info">
+                <h3>Sobre el Layout</h3>
                 <p>
-                    El contenido principal se mantiene flexible,
-                    mientras que las columnas laterales conservan un ancho fijo.
+                    Este sistema utiliza el patrón <strong>Holy Grail Layout</strong>
+                    implementado con <strong>CSS Grid</strong>, donde las columnas
+                    laterales mantienen un ancho fijo y el contenido central
+                    se adapta al espacio disponible.
                 </p>
             </article>
         </main>
 
         <aside class="aside">
-            <h2>Estado</h2>
+            <h2>Estado del Sistema</h2>
 
             <div class="status">
-                <p><strong>Usuarios activos:</strong> 128</p>
-                <p><strong>Clases hoy:</strong> 14</p>
+                <p><strong>Sesiones activas:</strong> 32</p>
                 <p><strong>Alertas:</strong> 2</p>
+                <p><strong>Servidor:</strong> Online</p>
             </div>
         </aside>
 
         <footer class="footer">
-            <p>© 2025 Sistema Académico Interno</p>
+            © 2025 Sistema Académico — Uso Interno
         </footer>
 
     </div>
