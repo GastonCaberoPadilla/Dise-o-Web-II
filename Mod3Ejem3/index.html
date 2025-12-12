@@ -1,121 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cards con Badges</title>
+    <title>Position Absolute – Badges</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <main class="container">
-        <header class="header">
-            <h1>Cards con Badges Posicionados</h1>
-            <p class="subtitle">Ejemplos de position: absolute aplicados a tarjetas</p>
-        </header>
+    <div class="container">
+        <h1>Uso de position: absolute</h1>
+        <p class="subtitle">
+            Ejemplos visuales de badges posicionados sobre contenedores
+        </p>
 
-        <section class="cards-grid">
+        <div class="cards-grid">
 
             <div class="card">
-                <span class="badge badge-new">Nuevo</span>
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop"
-                        alt="Auriculares">
-                </div>
+                <span class="badge badge-a">A</span>
+                <div class="card-image"></div>
                 <div class="card-content">
-                    <h3>Auriculares Pro Max</h3>
-                    <p>Cancelación de ruido activa y sonido de alta fidelidad.</p>
-                    <div class="card-footer">
-                        <span class="price">$299.99</span>
-                        <button class="btn">Comprar</button>
-                    </div>
+                    <h3>Ejemplo 1</h3>
+                    <p>Badge posicionado en la esquina superior derecha.</p>
                 </div>
             </div>
 
             <div class="card">
-                <span class="badge badge-discount">-20%</span>
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=300&fit=crop"
-                        alt="Reloj">
-                </div>
+                <span class="badge badge-b">B</span>
+                <div class="card-image"></div>
                 <div class="card-content">
-                    <h3>Reloj Smartwatch</h3>
-                    <p>Seguimiento de actividad diaria con diseño elegante.</p>
-                    <div class="card-footer">
-                        <span class="price">$199.99</span>
-                        <button class="btn">Comprar</button>
-                    </div>
+                    <h3>Ejemplo 2</h3>
+                    <p>Uso de absolute respecto a un contenedor relativo.</p>
                 </div>
             </div>
 
             <div class="card">
-                <span class="badge badge-hot">Hot</span>
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&h=300&fit=crop"
-                        alt="Gafas">
-                </div>
+                <span class="badge badge-c">C</span>
+                <div class="card-image"></div>
                 <div class="card-content">
-                    <h3>Gafas Premium</h3>
-                    <p>Protección UV400 con diseño moderno.</p>
-                    <div class="card-footer">
-                        <span class="price">$149.99</span>
-                        <button class="btn">Comprar</button>
-                    </div>
+                    <h3>Ejemplo 3</h3>
+                    <p>Elemento superpuesto sin afectar el flujo.</p>
                 </div>
             </div>
 
             <div class="card">
-                <span class="badge badge-limited">Últimas</span>
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=400&h=300&fit=crop"
-                        alt="Zapatillas">
-                </div>
+                <span class="badge badge-d">D</span>
+                <div class="card-image"></div>
                 <div class="card-content">
-                    <h3>Zapatillas Running</h3>
-                    <p>Máximo confort para entrenamientos exigentes.</p>
-                    <div class="card-footer">
-                        <span class="price">$179.99</span>
-                        <button class="btn">Comprar</button>
-                    </div>
+                    <h3>Ejemplo 4</h3>
+                    <p>Comparación visual de posicionamiento.</p>
                 </div>
             </div>
 
             <div class="card">
-                <span class="badge badge-premium">Premium</span>
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=300&fit=crop"
-                        alt="Mochila">
-                </div>
+                <span class="badge badge-e">E</span>
+                <div class="card-image"></div>
                 <div class="card-content">
-                    <h3>Mochila Profesional</h3>
-                    <p>Compartimento acolchado para laptop.</p>
-                    <div class="card-footer">
-                        <span class="price">$89.99</span>
-                        <button class="btn">Comprar</button>
-                    </div>
+                    <h3>Ejemplo 5</h3>
+                    <p>Badge fuera del flujo normal del documento.</p>
                 </div>
             </div>
 
             <div class="card">
-                <span class="badge badge-bestseller">Bestseller</span>
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=400&h=300&fit=crop"
-                        alt="Perfume">
-                </div>
+                <span class="badge badge-f">F</span>
+                <div class="card-image"></div>
                 <div class="card-content">
-                    <h3>Fragancia Signature</h3>
-                    <p>Notas frescas y amaderadas.</p>
-                    <div class="card-footer">
-                        <span class="price">$129.99</span>
-                        <button class="btn">Comprar</button>
-                    </div>
+                    <h3>Ejemplo 6</h3>
+                    <p>Referencia directa al contenedor padre.</p>
                 </div>
             </div>
 
-        </section>
-    </main>
+        </div>
+    </div>
 
 </body>
 </html>
