@@ -4,57 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solución: Modal Centrado</title>
+    <title>Modal Centrado | position fixed</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="container">
-        <h1>Ejercicio: Modal Centrado</h1>
-        <p>Haz clic en el botón para abrir el modal</p>
-        <button class="btn-open">Abrir Modal</button>
 
-        <div class="info">
-            <h3>Características del Modal:</h3>
+    <div class="container">
+        <h1>Modal Centrado</h1>
+        <p class="subtitle">
+            Ejemplo práctico usando <code>position: fixed</code>
+        </p>
+
+        <button class="btn-open">Mostrar modal</button>
+
+        <section class="info">
+            <h3>Este modal demuestra:</h3>
             <ul>
-                <li>Centrado con position: fixed</li>
-                <li>Overlay semitransparente</li>
-                <li>Cierre con botón X</li>
-                <li>Cierre al hacer clic fuera</li>
-                <li>Transiciones suaves</li>
+                <li>Overlay con position fixed</li>
+                <li>Centrado vertical y horizontal</li>
+                <li>Cierre por botón, fondo o tecla ESC</li>
+                <li>Transiciones simples</li>
             </ul>
-        </div>
+        </section>
     </div>
 
-    <!-- Modal overlay -->
+    <!-- Overlay -->
     <div class="modal-overlay" id="modalOverlay">
         <div class="modal">
-            <button class="btn-close" aria-label="Cerrar modal">&times;</button>
-            <div class="modal-icon">
-                <svg width="64" height="64" viewBox="0 0 24 24" fill="none">
-                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
-                    <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                </svg>
-            </div>
-            <h2>¡Bienvenido al Modal!</h2>
-            <p>Este es un modal centrado usando <code>position: fixed</code>.</p>
-            <p>El modal está perfectamente centrado tanto horizontal como verticalmente usando flexbox en el overlay.
+            <button class="btn-close" aria-label="Cerrar">&times;</button>
+
+            <h2>Modal activo</h2>
+            <p>
+                Este componente está centrado usando un contenedor
+                con <strong>position: fixed</strong> y flexbox.
             </p>
+
             <div class="modal-features">
-                <div class="feature">
-                    <span class="feature-icon">✓</span>
-                    <span>Centrado perfecto</span>
-                </div>
-                <div class="feature">
-                    <span class="feature-icon">✓</span>
-                    <span>Overlay responsive</span>
-                </div>
-                <div class="feature">
-                    <span class="feature-icon">✓</span>
-                    <span>Animaciones suaves</span>
-                </div>
+                <div class="feature">✔ Overlay bloqueante</div>
+                <div class="feature">✔ Centrado exacto</div>
+                <div class="feature">✔ Control por JS</div>
             </div>
-            <button class="btn-modal-action">Entendido</button>
+
+            <button class="btn-modal-action">Cerrar modal</button>
         </div>
     </div>
 
