@@ -1,76 +1,92 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Archivo Histórico Digital</title>
+    <title>Gallery Grid — Archivo Visual</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
     <header class="top">
-        <h1>Archivo Histórico Digital</h1>
-        <p>Consulta de documentos y registros históricos organizados por categorías</p>
+        <h1>Archivo Visual</h1>
+        <p>Galería de imágenes organizada mediante CSS Grid</p>
     </header>
 
-    <main class="layout">
+    <main class="wrapper">
 
-        <!-- Panel lateral -->
-        <aside class="sidebar">
-            <h2>Categorías</h2>
+        <!-- Panel informativo -->
+        <aside class="info">
+            <h2>Descripción</h2>
+            <p>
+                Esta galería utiliza <strong>CSS Grid</strong> para distribuir
+                automáticamente una gran cantidad de imágenes sin depender
+                de media queries.
+            </p>
+
             <ul>
-                <li>Siglo XIX</li>
-                <li>Siglo XX</li>
-                <li>Registros civiles</li>
-                <li>Cartografía</li>
-                <li>Fotografía antigua</li>
+                <li>CSS Grid</li>
+                <li>auto-fit + minmax()</li>
+                <li>Imágenes en gran volumen</li>
+                <li>Estructura limpia</li>
             </ul>
         </aside>
 
-        <!-- Grid documental -->
-        <section class="records">
+        <!-- GRID DE IMÁGENES -->
+        <section class="gallery">
 
-            <article class="record">
-                <h3>Acta de Fundación</h3>
-                <p class="meta">Año: 1825 · Tipo: Documento oficial</p>
-                <p class="desc">Documento original de la fundación de la ciudad.</p>
-            </article>
+            <figure class="item large">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" alt="">
+                <figcaption>Montañas</figcaption>
+            </figure>
 
-            <article class="record important">
-                <h3>Censo Nacional</h3>
-                <p class="meta">Año: 1900 · Tipo: Registro estadístico</p>
-                <p class="desc">Listado poblacional completo del territorio.</p>
-            </article>
+            <figure class="item">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800" alt="">
+                <figcaption>Océano</figcaption>
+            </figure>
 
-            <article class="record">
-                <h3>Mapa Urbano</h3>
-                <p class="meta">Año: 1912 · Tipo: Cartografía</p>
-                <p class="desc">Plano detallado del trazado urbano antiguo.</p>
-            </article>
+            <figure class="item">
+                <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800" alt="">
+                <figcaption>Cielo nocturno</figcaption>
+            </figure>
 
-            <article class="record">
-                <h3>Crónica Periodística</h3>
-                <p class="meta">Año: 1934 · Tipo: Hemeroteca</p>
-                <p class="desc">Artículo histórico sobre acontecimientos sociales.</p>
-            </article>
+            <figure class="item tall">
+                <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800" alt="">
+                <figcaption>Bosque</figcaption>
+            </figure>
 
-            <article class="record important">
-                <h3>Registro Fotográfico</h3>
-                <p class="meta">Año: 1920 · Tipo: Fotografía</p>
-                <p class="desc">Colección de imágenes restauradas.</p>
-            </article>
+            <figure class="item">
+                <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800" alt="">
+                <figcaption>Niebla</figcaption>
+            </figure>
 
-            <article class="record">
-                <h3>Informe Municipal</h3>
-                <p class="meta">Año: 1951 · Tipo: Documento técnico</p>
-                <p class="desc">Reporte de infraestructura urbana.</p>
-            </article>
+            <figure class="item wide">
+                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800" alt="">
+                <figcaption>Desierto</figcaption>
+            </figure>
+
+            <figure class="item">
+                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800" alt="">
+                <figcaption>Nieve</figcaption>
+            </figure>
+
+            <figure class="item">
+                <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800" alt="">
+                <figcaption>Río</figcaption>
+            </figure>
+
+            <figure class="item large">
+                <img src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6?w=800" alt="">
+                <figcaption>Cascada</figcaption>
+            </figure>
 
         </section>
 
     </main>
 
     <footer class="footer">
-        <p>Archivo Histórico Digital · Uso educativo
+        <p>Ejercicio académico — CSS Grid Gallery</p>
+    </footer>
+
+</body>
+</html>
