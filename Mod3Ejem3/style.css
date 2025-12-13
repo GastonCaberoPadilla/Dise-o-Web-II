@@ -7,26 +7,35 @@
 
 /* BASE */
 body {
-    font-family: monospace;
-    background: #ffffff;
-    color: #111;
+    font-family: system-ui, sans-serif;
+    background: #f2f4ff;
+    color: #1f2937;
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
-    padding: 3rem 2rem;
+    padding: 2rem;
 }
 
-h1 {
-    font-size: 2rem;
+/* HEADER */
+.hero {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: #fff;
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    border-radius: 16px;
+    margin-bottom: 3rem;
+}
+
+.hero h1 {
+    font-size: 1.8rem;
     margin-bottom: 0.5rem;
 }
 
-.subtitle {
-    color: #555;
-    margin-bottom: 3rem;
+.hero p {
     font-size: 0.95rem;
+    opacity: 0.9;
 }
 
 /* GRID */
@@ -39,59 +48,61 @@ h1 {
 /* CARD */
 .card {
     position: relative;
-    border: 2px solid #000;
+    background: #ffffff;
+    border-radius: 16px;
     padding: 1rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
 }
 
 .card-image {
-    height: 120px;
-    background: repeating-linear-gradient(
-        45deg,
-        #eee,
-        #eee 10px,
-        #ddd 10px,
-        #ddd 20px
+    height: 140px;
+    border-radius: 12px;
+    background: linear-gradient(
+        135deg,
+        #e0e7ff,
+        #c7d2fe
     );
     margin-bottom: 1rem;
 }
 
 .card-content h3 {
     font-size: 1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
 }
 
 .card-content p {
     font-size: 0.85rem;
-    color: #333;
+    color: #4b5563;
 }
 
 /* BADGES */
 .badge {
     position: absolute;
-    top: -12px;
-    right: -12px;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    border: 2px solid #000;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
+    top: 12px;
+    right: 12px;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #fff;
 }
 
-/* Variantes solo para diferenciación */
-.badge-a { background: #fca5a5; }
-.badge-b { background: #fdba74; }
-.badge-c { background: #fde047; }
-.badge-d { background: #86efac; }
-.badge-e { background: #93c5fd; }
-.badge-f { background: #c4b5fd; }
+/* COLORES */
+.badge-a { background: #ef4444; }
+.badge-b { background: #f97316; }
+.badge-c { background: #eab308; color: #1f2937; }
+.badge-d { background: #22c55e; }
+.badge-e { background: #3b82f6; }
+.badge-f { background: #8b5cf6; }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
     .container {
-        padding: 2rem 1rem;
+        padding: 1.5rem 1rem;
     }
 }
